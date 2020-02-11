@@ -53,6 +53,8 @@ $ vue create .
 
 - Yを入力（使用する）
 
+- 使用しないとハッシュモードになる：URLに「#」が入ってしまって綺麗じゃない…
+
 ### 使いたいLinterの選択
 
 ```
@@ -113,6 +115,10 @@ $ vue create .
 
 - 今回はNPMを選択した
 
+- ちゃんとしたプロジェクト作るなら、yarnの方が良さそうかも（参考URLへ）
+
 ## 参考URL
 
 - [Vue CLI 3 インストールからプロジェクト作成まで - Qiita](https://qiita.com/kamitomo/items/34451b11caaf51bd2498)
+
+- [npm vs yarnどっち使うかの話 - Qiita](https://qiita.com/jigengineer/items/c75ca9b8f0e9ce462e99)
