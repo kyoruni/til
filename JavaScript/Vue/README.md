@@ -1,21 +1,55 @@
-# Vue.js
+# kyoruni/til/Javascript/Vue/practice
 
-## 概要
+- Vue.js お試し用プロジェクト
 
-- びゅーじぇいえす
+## 初回起動
 
-- JavaScriptのフレームワーク
+#### コンテナ起動
 
-## 試し打ち
+```
+$ docker-compose up -d --build
+$ docker-compose exec vue ash
+```
 
-[JSFiddle](https://jsfiddle.net/)
+#### モジュールのインストール、ローカルホスト立ち上げ
 
-- 「Vue」選択するだけで、Vue.jsのお試し環境がすぐ使える
+```
+$ npm install
+$ npm run serve
+```
 
-## Docker環境
+## 2回目
 
-- Node：13.5.0
+#### `Dockerfile` の、下記部分をコメントアウト
 
-- Vue：2.6.11
+```
+command: tail -f /dev/null
+```
 
-- Vue CLI：4.1.2
+#### `Dockerfile` の、下記部分のコメントアウトを解除
+
+```
+# command: npm run serve
+```
+
+#### コンテナ起動＆ビルド
+
+```
+$ docker-compose up -d --build
+```
+
+## 2回目以降
+
+#### コンテナ起動
+
+```
+$ docker-compose up -d
+```
+
+## 停止方法
+
+#### コンテナ閉じる
+
+```
+$ docker-compose down
+```

@@ -1,55 +1,24 @@
-# kyoruni/til/Javascript/Vue/practice
+# practice
 
-- Vue.js お試し用プロジェクト
-
-## 初回起動
-
-#### コンテナ起動
-
+## Project setup
 ```
-$ docker-compose up -d --build
-$ docker-compose exec vue ash
+npm install
 ```
 
-#### モジュールのインストール、ローカルホスト立ち上げ
-
+### Compiles and hot-reloads for development
 ```
-$ npm install
-$ npm run serve
+npm run serve
 ```
 
-## 2回目
-
-#### `Dockerfile` の、下記部分をコメントアウト
-
+### Compiles and minifies for production
 ```
-command: tail -f /dev/null
+npm run build
 ```
 
-#### `Dockerfile` の、下記部分のコメントアウトを解除
-
+### Lints and fixes files
 ```
-# command: npm run serve
-```
-
-#### コンテナ起動＆ビルド
-
-```
-$ docker-compose up -d --build
+npm run lint
 ```
 
-## 2回目以降
-
-#### コンテナ起動
-
-```
-$ docker-compose up -d
-```
-
-## 停止方法
-
-#### コンテナ閉じる
-
-```
-$ docker-compose down
-```
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
