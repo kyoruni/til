@@ -12,17 +12,17 @@
       </div>
     </div>
     <div class="mt-2">
-      <photoshop-picker :value="colors"></photoshop-picker>
+      <color-picker :value="colors"></color-picker>
     </div>
   </div>
 </template>
 
 <script>
-import { Photoshop } from 'vue-color'
+import { Sketch } from 'vue-color'
 
 export default {
   components: {
-    'photoshop-picker': Photoshop
+    'color-picker': Sketch
   },
   data () {
     return {
