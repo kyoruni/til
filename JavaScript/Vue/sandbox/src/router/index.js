@@ -20,6 +20,12 @@ const routes = [
     path: '/lifecycle',
     name: 'Lifecycle',
     component: () => import(/* webpackChunkName: "lifecycle" */ '../views/Lifecycle.vue')
+  },
+  {
+    // #10 カラーピッカーを試す
+    path: '/vue-color',
+    name: 'VueColor',
+    component: () => import(/* webpackChunkName: "VueColor" */ '../views/Vuecolor.vue')
   }
 ]
 
