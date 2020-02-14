@@ -1,14 +1,8 @@
 <template>
   <div class="vue-color">
     <div class="d-flex mt-2">
-      <div class="section1 mr-2">
-        section1
-      </div>
-      <div class="section2 mr-2">
-        section2
-      </div>
-      <div class="section3">
-        section3
+      <div v-for="section in sections" :key="section.id" :style="{background:section.background}" class="section mr-2">
+        {{ section.id }}
       </div>
     </div>
     <div class="mt-2">
@@ -26,6 +20,11 @@ export default {
   },
   data () {
     return {
+      sections: [
+        { id: 1, background: '#ff0000' },
+        { id: 2, background: '#0000ff' },
+        { id: 3, background: '#008000' },
+      ],
       colors: {
         hex: '#ff99cc',
         a: 1
@@ -39,24 +38,14 @@ export default {
 }
 </script>
 <style scoped>
-.section1 {
+.section {
   height: 100px;
   width: 100px;
   color: white;
   background: red;
 }
 
-.section2 {
-  height: 100px;
-  width: 100px;
-  color: white;
-  background: blue;
-}
-
-.section3 {
-  height: 100px;
-  width: 100px;
-  color: white;
-  background: green;
+.section1 {
+  background: red;
 }
 </style>
