@@ -1,13 +1,13 @@
 <template>
   <div class="vue-color">
-    <div class="d-flex">
-      <div class="section1 mt-2">
+    <div class="d-flex mt-2">
+      <div class="section1 mr-2">
         section1
       </div>
-      <div class="section2 mt-2">
+      <div class="section2 mr-2">
         section2
       </div>
-      <div class="section3 mt-2">
+      <div class="section3">
         section3
       </div>
     </div>
