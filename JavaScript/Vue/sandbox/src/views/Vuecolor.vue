@@ -1,7 +1,8 @@
 <template>
   <div class="vue-color">
     <div class="d-flex mt-2">
-      <div v-for="section in sections" :key="section.id" :style="{background:section.background}" class="section mr-2">
+      <div v-for="section in sections" :key="section.id" :style="{background:section.background}" class="section mr-2"
+        @click="clickSection(section.background)">
         {{ section.id }}
       </div>
     </div>
@@ -33,6 +34,12 @@ export default {
         '#dd5588', '#ff7687', '#ffaf80', '#ffdf7b', '#fff4b3', '#77b5bd', '#0191b6', '#37bbca',
         '#d4caee', '#d3de16', '#f9f117', '#f9d80f', '#ff7b17', '#000000', '#ffffff', 'rgba(0,0,0,0)'
       ]
+    }
+  },
+  methods: {
+    clickSection (background) {
+      console.log(background)
+      this.color.hex = '#ffffff'
     }
   }
 }
