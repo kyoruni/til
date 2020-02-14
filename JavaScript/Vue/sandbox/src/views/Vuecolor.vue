@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="mt-2">
-      <color-picker v-model="colors" :presetColors="presetColors"></color-picker>
+      <color-picker v-model="colors" :presetColors="presetColors" :disableAlpha="true"></color-picker>
     </div>
   </div>
 </template>
