@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="mt-2">
-      <color-picker v-model="colors"></color-picker>
+      <color-picker v-model="colors" :presetColors="presetColors"></color-picker>
     </div>
   </div>
 </template>
@@ -32,7 +32,11 @@ export default {
         hsv: { h: 150, s: 0.66, v: 0.30, a: 1 },
         rgba: { r: 25, g: 77, b: 51, a: 1 },
         a: 1
-      }
+      },
+      presetColors: [
+        '#dd5588', '#ff7687', '#ffaf80', '#ffdf7b', '#fff4b3', '#77b5bd', '#0191b6', '#37bbca',
+        '#d4caee', '#d3de16', '#f9f117', '#f9d80f', '#ff7b17', '#000000', '#ffffff', 'rgba(0,0,0,0)'
+      ]
     }
   }
 }
