@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <button class="btn btn-info">
-      test
-    </button>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <!-- ヘッダーここから -->
+    <div>
+      <b-navbar type="dark" variant="info">
+        <b-navbar-brand href="#">
+          Vue.js お試し
+        </b-navbar-brand>
+      </b-navbar>
     </div>
-    <router-view/>
+    <!-- ヘッダーここまで -->
+    <div class="container-fluid">
+      <router-view/>
+    </div>
   </div>
 </template>
 
