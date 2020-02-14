@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="mt-2">
-      <color-picker v-model="colors" :presetColors="presetColors" :disableAlpha="true"></color-picker>
+      <color-picker v-model="color" :presetColors="presetColors" :disableAlpha="true"></color-picker>
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
         { id: 2, background: '#0000ff' },
         { id: 3, background: '#008000' },
       ],
-      colors: {
+      color: {
         hex: '#ff99cc',
         a: 1
       },
