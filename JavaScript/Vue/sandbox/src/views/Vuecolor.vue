@@ -1,11 +1,13 @@
 <template>
   <div class="vue-color">
+    <!-- 赤青緑のブロック -->
     <div class="d-flex mt-2">
       <div v-for="section in sections" :key="section.id" :style="{background:section.background}" class="section mr-2"
         @click="clickSection(section.background)">
         {{ section.id }}
       </div>
     </div>
+    <!-- カラーピッカーのブロック -->
     <div class="mt-2">
       <div class="section" :style="{background:color.hex}">
         change
