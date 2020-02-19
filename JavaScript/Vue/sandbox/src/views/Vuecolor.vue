@@ -4,13 +4,13 @@
     <div class="d-flex mt-2">
       <div v-for="section in sections" :key="section.id" :style="{background:section.background}" class="section mr-2 pointer"
         @click="clickSection(section.background)">
-        {{ section.id }}
+        {{ section.name }}
       </div>
     </div>
     <!-- カラーピッカーのブロック -->
     <div class="mt-2">
       <div class="section" :style="{background:color.hex}">
-        change
+        CHANGE
       </div>
       <color-picker v-model="color" :presetColors="presetColors" :disableAlpha="true" class="mt-2"></color-picker>
     </div>
@@ -27,9 +27,9 @@ export default {
   data () {
     return {
       sections: [
-        { id: 1, background: '#ff0000' },
-        { id: 2, background: '#0000ff' },
-        { id: 3, background: '#008000' },
+        { id: 1, name: 'RED', background: '#ff0000' },
+        { id: 2, name: 'BLUE', background: '#0000ff' },
+        { id: 3, name: 'GREEN', background: '#008000' },
       ],
       color: {
         hex: '#ff99cc'
