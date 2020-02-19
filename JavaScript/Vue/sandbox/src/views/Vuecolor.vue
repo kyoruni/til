@@ -27,8 +27,8 @@ export default {
   data () {
     return {
       sections: [
-        { id: 1, name: 'RED', background: '#ff0000' },
-        { id: 2, name: 'BLUE', background: '#0000ff' },
+        { id: 1, name: 'RED',   background: '#ff0000' },
+        { id: 2, name: 'BLUE',  background: '#0000ff' },
         { id: 3, name: 'GREEN', background: '#008000' },
       ],
       color: {
