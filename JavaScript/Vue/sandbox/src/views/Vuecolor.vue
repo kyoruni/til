@@ -12,7 +12,7 @@
       <div class="section" :style="{background:color.hex}">
         CHANGE
       </div>
-      <color-picker v-model="color" :presetColors="presetColors" :disableAlpha="true" class="mt-2"></color-picker>
+      <color-picker v-model="color" :presetColors="presetColors" :disableAlpha="true" class="mt-2" :disableFields="is_disableFields"></color-picker>
     </div>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default {
         { id: 3, name: 'GREEN', background: '#008000' },
       ],
       color: {
-        a: 1, // 透明度：通常は1、背景色なし選択時のみ0になる
+        a: 1,
         hex: '#ff99cc'
       },
       presetColors: [
@@ -47,13 +47,26 @@ export default {
       this.color = { hex: background }
     }
   },
+  computed: {
+    // カラーコード入力欄の制御
+    is_disableFields () {
+      // hex8：カラーコード6桁 + 不透明度2桁
+      let hex8 = this.color.hex8
+
+      // 不透明度がFF以外（不透明でない）の場合、カラーコード入力欄を非表示にする
+      if (hex8 && hex8.slice(-2) !== 'FF') {
+        return true
+      }
+      return false
+    }
+  },
   watch: {
-    // 背景色の透明度
-    'color.a' (transparent) {
-      // 透明度0：背景色なしが選択された場合
-      if (transparent === 0) {
-        this.color.a = 1
+    // 不透明度
+    'color.a': function (value) {
+      // 不透明度が1以外のとき：色を透明、不透明度を1にする
+      if (value !== 1) {
         this.color.hex = 'transparent'
+        this.color.a = 1
       }
     }
   }
