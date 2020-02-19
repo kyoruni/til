@@ -33,12 +33,14 @@ export default {
       ],
       color: {
         a: 1,
-        hex: '#ff99cc'
+        hex: '#ff99cc',
+        hex8: ''
       },
       presetColors: [
         '#dd5588', '#ff7687', '#ffaf80', '#ffdf7b', '#fff4b3', '#77b5bd', '#0191b6', '#37bbca',
         '#d4caee', '#d3de16', '#f9f117', '#f9d80f', '#ff7b17', '#000000', '#ffffff', 'transparent'
-      ]
+      ],
+      is_disableFields: false
     }
   },
   methods: {
@@ -47,27 +49,10 @@ export default {
       this.color = { hex: background }
     }
   },
-  computed: {
-    // カラーコード入力欄の制御
-    is_disableFields () {
-      // hex8：カラーコード6桁 + 不透明度2桁
-      let hex8 = this.color.hex8
-
-      // 不透明度がFF以外（不透明でない）の場合、カラーコード入力欄を非表示にする
-      if (hex8 && hex8.slice(-2) !== 'FF') {
-        return true
-      }
-      return false
-    }
-  },
   watch: {
-    // 不透明度
-    'color.a': function (value) {
-      // 不透明度が1以外のとき：色を透明、不透明度を1にする
-      if (value !== 1) {
-        this.color.hex = 'transparent'
-        this.color.a = 1
-      }
+    'color.hex8': function (value) {
+      console.log(value)
+      this.color.hex = this.color.hex8.slice(1, 6)
     }
   }
 }
