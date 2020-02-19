@@ -32,11 +32,12 @@ export default {
         { id: 3, name: 'GREEN', background: '#008000' },
       ],
       color: {
+        a: 1, // 透明度：通常は1、背景色なし選択時のみ0になる
         hex: '#ff99cc'
       },
       presetColors: [
         '#dd5588', '#ff7687', '#ffaf80', '#ffdf7b', '#fff4b3', '#77b5bd', '#0191b6', '#37bbca',
-        '#d4caee', '#d3de16', '#f9f117', '#f9d80f', '#ff7b17', '#000000', '#ffffff'
+        '#d4caee', '#d3de16', '#f9f117', '#f9d80f', '#ff7b17', '#000000', '#ffffff', 'transparent'
       ]
     }
   },
@@ -44,6 +45,16 @@ export default {
     clickSection (background) {
       // オブジェクトを丸ごと入れ替えないと、ライブラリ側が反応しない
       this.color = { hex: background }
+    }
+  },
+  watch: {
+    // 背景色の透明度
+    'color.a' (transparent) {
+      // 透明度0：背景色なしが選択された場合
+      if (transparent === 0) {
+        this.color.a = 1
+        this.color.hex = 'transparent'
+      }
     }
   }
 }
