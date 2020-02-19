@@ -2,7 +2,7 @@
   <div class="vue-color">
     <!-- 赤青緑のブロック -->
     <div class="d-flex mt-2">
-      <div v-for="section in sections" :key="section.id" :style="{background:section.background}" class="section mr-2"
+      <div v-for="section in sections" :key="section.id" :style="{background:section.background}" class="section mr-2 pointer"
         @click="clickSection(section.background)">
         {{ section.id }}
       </div>
@@ -53,10 +53,9 @@ export default {
   height: 100px;
   width: 100px;
   color: white;
-  background: red;
 }
 
-.section1 {
-  background: red;
+.pointer {
+  cursor: pointer;
 }
 </style>
