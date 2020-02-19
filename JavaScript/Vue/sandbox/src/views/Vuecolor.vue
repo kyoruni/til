@@ -27,8 +27,7 @@ export default {
         { id: 3, background: '#008000' },
       ],
       color: {
-        hex: '#ff99cc',
-        a: 1
+        hex: '#ff99cc'
       },
       presetColors: [
         '#dd5588', '#ff7687', '#ffaf80', '#ffdf7b', '#fff4b3', '#77b5bd', '#0191b6', '#37bbca',
@@ -38,8 +37,8 @@ export default {
   },
   methods: {
     clickSection (background) {
-      console.log(background)
-      this.color.hex = '#ffffff'
+      // オブジェクトを丸ごと入れ替えないと、ライブラリ側が反応しない
+      this.color = { hex: background }
     }
   }
 }

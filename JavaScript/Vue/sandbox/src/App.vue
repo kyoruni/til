@@ -4,7 +4,7 @@
     <div>
       <b-navbar type="dark" variant="info">
         <b-navbar-brand href="#">
-          Vue.js お試し
+          お試し
         </b-navbar-brand>
       </b-navbar>
     </div>
