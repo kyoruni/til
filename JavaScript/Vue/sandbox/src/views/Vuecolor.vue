@@ -7,7 +7,10 @@
       </div>
     </div>
     <div class="mt-2">
-      <color-picker v-model="color" :presetColors="presetColors" :disableAlpha="true"></color-picker>
+      <div class="section" :style="{background:color.hex}">
+        change
+      </div>
+      <color-picker v-model="color" :presetColors="presetColors" :disableAlpha="true" class="mt-2"></color-picker>
     </div>
   </div>
 </template>
