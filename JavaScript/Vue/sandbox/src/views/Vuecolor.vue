@@ -32,9 +32,7 @@ export default {
         { id: 3, name: 'GREEN', background: '#008000' },
       ],
       color: {
-        a: 1,
-        hex: '#ff99cc',
-        hex8: ''
+        hex: '#ff99cc'
       },
       presetColors: [
         '#dd5588', '#ff7687', '#ffaf80', '#ffdf7b', '#fff4b3', '#77b5bd', '#0191b6', '#37bbca',
