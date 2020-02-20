@@ -37,7 +37,7 @@ export default {
   methods: {
     clickSection (background) {
       // オブジェクトを丸ごと入れ替えないと、ライブラリ側が反応しない
-      this.color = { hex: background, source: 'hex' }
+      this.color = { hex: background }
     }
   },
   watch: {
@@ -49,7 +49,7 @@ export default {
     },
     'color' (value) {
       // カラーピッカーのプレビューが透明にならないように、アルファ値を1にしておく
-      if (value.hex) {
+      if (value.a && value.hex) {
         this.color.hsl.a = 1
         this.color.a = 1
       }
