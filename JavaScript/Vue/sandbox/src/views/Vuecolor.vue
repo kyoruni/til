@@ -31,11 +31,7 @@ export default {
         { id: 2, name: 'BLUE',  background: '#0000ff' },
         { id: 3, name: 'GREEN', background: '#008000' },
       ],
-      color: '#ff99cc',
-      presetColors: [
-        '#dd5588', '#ff7687', '#ffaf80', '#ffdf7b', '#fff4b3', '#77b5bd', '#0191b6', '#37bbca',
-        '#d4caee', '#d3de16', '#f9f117', '#f9d80f', '#ff7b17', '#000000', '#ffffff', 'transparent'
-      ]
+      color: '#ff99cc'
     }
   },
   methods: {
