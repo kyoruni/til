@@ -3,7 +3,7 @@
     <!-- ヘッダーここから -->
     <div>
       <b-navbar type="dark" variant="info">
-        <b-navbar-brand href="#">
+        <b-navbar-brand href="/">
           お試し
         </b-navbar-brand>
       </b-navbar>
