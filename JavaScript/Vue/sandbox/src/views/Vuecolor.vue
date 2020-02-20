@@ -12,7 +12,7 @@
       <div class="section" :style="{background:color.hex}">
         CHANGE
       </div>
-      <color-picker v-model="color" :presetColors="presetColors" :disableAlpha="true" class="mt-2"></color-picker>
+      <color-picker v-model="color" :disableAlpha="true" class="mt-2"></color-picker>
     </div>
   </div>
 </template>
@@ -31,9 +31,7 @@ export default {
         { id: 2, name: 'BLUE',  background: '#0000ff' },
         { id: 3, name: 'GREEN', background: '#008000' },
       ],
-      color: {
-        hex: '#ff99cc'
-      },
+      color: '#ff99cc',
       presetColors: [
         '#dd5588', '#ff7687', '#ffaf80', '#ffdf7b', '#fff4b3', '#77b5bd', '#0191b6', '#37bbca',
         '#d4caee', '#d3de16', '#f9f117', '#f9d80f', '#ff7b17', '#000000', '#ffffff', 'transparent'
@@ -43,16 +41,14 @@ export default {
   methods: {
     clickSection (background) {
       // オブジェクトを丸ごと入れ替えないと、ライブラリ側が反応しない
-      this.color = { hex: background }
+      this.color = { hex: background, source: 'hex' }
     }
   },
   watch: {
     'color.hex8' (value) {
-      // 透明が選択された場合、カラーコードをtransparentにする
+      // 透明が選択されたら、カラーコードを空欄にしておく
       if (value === '#00000000') {
-        this.color = { hex: 'transparent' }
-      } else {
-        this.color = { hex: this.color.hex }
+        this.color = { hex: '' }
       }
     }
   }
