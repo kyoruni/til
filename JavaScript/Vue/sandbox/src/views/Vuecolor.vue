@@ -31,7 +31,7 @@ export default {
         { id: 2, name: 'BLUE',  background: '#0000ff' },
         { id: 3, name: 'GREEN', background: '#008000' },
       ],
-      color: '#ff99cc'
+      color: { hex: '#ff99cc' }
     }
   },
   methods: {
