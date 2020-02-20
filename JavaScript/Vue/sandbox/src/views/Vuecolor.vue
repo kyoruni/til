@@ -12,7 +12,7 @@
       <div class="section" :style="{background:color.hex}">
         CHANGE
       </div>
-      <color-picker v-model="color" :presetColors="presetColors" :disableAlpha="true" class="mt-2" :disableFields="is_disableFields"></color-picker>
+      <color-picker v-model="color" :presetColors="presetColors" :disableAlpha="true" class="mt-2"></color-picker>
     </div>
   </div>
 </template>
@@ -39,8 +39,7 @@ export default {
       presetColors: [
         '#dd5588', '#ff7687', '#ffaf80', '#ffdf7b', '#fff4b3', '#77b5bd', '#0191b6', '#37bbca',
         '#d4caee', '#d3de16', '#f9f117', '#f9d80f', '#ff7b17', '#000000', '#ffffff', 'transparent'
-      ],
-      is_disableFields: false
+      ]
     }
   },
   methods: {
@@ -50,9 +49,13 @@ export default {
     }
   },
   watch: {
-    'color.hex8': function (value) {
-      console.log(value)
-      this.color.hex = this.color.hex8.slice(1, 6)
+    'color.hex8' (value) {
+      // 透明が選択された場合、カラーコードをtransparentにする
+      if (value === '#00000000') {
+        this.color = { hex: 'transparent' }
+      } else {
+        this.color = { hex: this.color.hex }
+      }
     }
   }
 }
