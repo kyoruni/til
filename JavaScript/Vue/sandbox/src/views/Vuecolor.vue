@@ -47,10 +47,12 @@ export default {
         this.color = { hex: '' }
       }
     },
-    'color' () {
+    'color' (value) {
       // カラーピッカーのプレビューが透明にならないように、アルファ値を1にしておく
-      this.color.hsl.a = 1
-      this.color.a = 1
+      if (value.hex) {
+        this.color.hsl.a = 1
+        this.color.a = 1
+      }
     }
   }
 }
