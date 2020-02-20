@@ -46,6 +46,11 @@ export default {
       if (value === '#00000000') {
         this.color = { hex: '' }
       }
+    },
+    'color' () {
+      // カラーピッカーのプレビューが透明にならないように、アルファ値を1にしておく
+      this.color.hsl.a = 1
+      this.color.a = 1
     }
   }
 }
