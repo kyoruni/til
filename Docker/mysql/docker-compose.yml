@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  mysql:
+    image: mysql:8
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      TZ: 'Asia/Tokyo'
+    ports:
+      - 3306:3306
