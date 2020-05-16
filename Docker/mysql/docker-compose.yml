@@ -9,5 +9,8 @@ services:
       TZ: 'Asia/Tokyo'
     volumes:
       - ./etc/my.cnf:/etc/mysql/conf.d/my.cnf
+      - til-db-data:/var/lib/mysql
     ports:
       - 3306:3306
+volumes:
+  til-db-data:
