@@ -9,6 +9,7 @@ services:
       TZ: 'Asia/Tokyo'
     volumes:
       - ./etc/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./ddl:/docker-entrypoint-initdb.d
       - til-db-data:/var/lib/mysql
     ports:
       - 3306:3306
