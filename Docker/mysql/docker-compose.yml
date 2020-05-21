@@ -12,6 +12,6 @@ services:
       - ./ddl:/docker-entrypoint-initdb.d
       - til-db-data:/var/lib/mysql
     ports:
-      - 3306:3306
+      - 4306:3306
 volumes:
   til-db-data:
