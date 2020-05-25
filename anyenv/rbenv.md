@@ -80,3 +80,12 @@ If the version you need is missing, try upgrading ruby-build:
 ##### ■ どのバージョンをインストールするべきか
 
 - [Ruby公式ページ](https://www.ruby-lang.org/ja/downloads/) で現在のバージョンを確認する
+
+
+## 参考URL
+
+- [rbenv/rbenv: Groom your app’s Ruby environment](https://github.com/rbenv/rbenv)
+
+- [rbenvからRubyの最新のバージョンをインストールできなかったときやったこと - Qiita](https://qiita.com/makimoch/items/65da3ca353c53b3d9dd4)
+
+- [rbenv | global と local と .ruby-version の微妙な関係 - Qiita](https://qiita.com/Yinaura/items/0b021984bb21ae77816d)
