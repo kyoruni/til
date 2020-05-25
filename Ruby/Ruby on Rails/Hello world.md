@@ -1,0 +1,5 @@
+## Railsのインストール
+
+```
+$ gem install rails
+```
