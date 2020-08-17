@@ -2,9 +2,9 @@
 
 ## 第0章 SQL学習環境を作ろう
 
-- [ ] PostgreSQLのインストールと接続設定
+- [x] PostgreSQLのインストールと接続設定
 
-- [ ] PostgreSQLでSQLを実行する
+- [x] PostgreSQLでSQLを実行する
 
 ## 第1章 データベースとSQL
 
