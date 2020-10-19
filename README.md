@@ -23,7 +23,3 @@
 - [book-log](https://github.com/kyoruni/til/tree/master/book-log)
 
   - 技術書を読んだら、ディレクトリ配下の進捗ファイルを更新する
-
-- [output.md](https://github.com/kyoruni/til/blob/master/output.md)
-
-  - ブログを書いたら、このファイルを更新する
