@@ -1,4 +1,20 @@
-# テーブル作成
+# CREATE
+
+## データベース作成
+
+```sql
+CREATE DATABASE ${データベース名};
+```
+
+##### hoge データベースを作る
+
+```sql
+CREATE DATABASE hoge;
+```
+
+## テーブル作成
+
+##### users テーブルを作る
 
 ```sql
 CREATE TABLE users (
