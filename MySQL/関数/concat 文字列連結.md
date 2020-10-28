@@ -1,13 +1,13 @@
-# concat 文字列連結
+# CONCAT 文字列連結
 
 ```
-concat(1つ目のカラム, 2つ目のカラム)
+CONCAT(1つ目のカラム, 2つ目のカラム)
 ```
 
 ##### 使ってみる
 
-```
-mysql> select * from hoge;
+```sql
+mysql> SELECT * FROM hoge;
 +----------+-----------+
 | str1     | str2      |
 +----------+-----------+
@@ -16,8 +16,8 @@ mysql> select * from hoge;
 1 rows in set (0.00 sec)
 
 
-mysql> select str1, str2, concat(str1, str2)
-    -> from hoge;
+mysql> SELECT str1, str2, CONCAT(str1, str2)
+    -> FROM hoge;
 +----------+-----------+-----------------------+
 | str1     | str2      | concat(str1, str2)    |
 +----------+-----------+-----------------------+
