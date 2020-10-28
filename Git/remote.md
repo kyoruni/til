@@ -1,12 +1,14 @@
-# リモートのURLを変更する
+# remote
 
-## どこに向いているか確認
+## リモートのURLを変更する
+
+### どこに向いているか確認
 
 ```
 $ git remote -v
 ```
 
-## 変更
+### 変更
 
 ```
 $ git remote set-url origin {newUrl}
