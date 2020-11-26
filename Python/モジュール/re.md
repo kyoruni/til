@@ -283,3 +283,38 @@ HTML要素がバラバラに取れた
 <h1>
 </h1>
 ```
+
+## 正規表現で置換
+
+- `pattern.sub(置換する文字, 置換される文字)`
+
+- `\g<0>` の部分に、マッチングした文字が置換されて入る
+
+```python
+import re
+
+text    = 'URLはhttps://example.com です。'
+pattern = re.compile(r'http(s)?://([\w-]+\.)+[\w-]+(/[\w./?%&=-]*)?', re.IGNORECASE)
+result  = pattern.sub(r'<a href="\g<0>">\g<0></a>', text)
+print(result)
+```
+
+```python
+URLは<a href="https://example.com">https://example.com</a> です。
+```
+
+- 名前付きキャプチャグループも使える
+
+```python
+import re
+
+text = '080-1234-5678です！090-9876-5432です！'
+
+pattern = re.compile(r'(?P<area>\d{2,4})-(?P<city>\d{2,4})-(?P<local>\d{2,4})')
+result  = pattern.sub(r'市外局番は\g<city> 市内局番は\g<city> 加入者番号は\g<local>', text)
+print(result)
+```
+
+```python
+市外局番は1234 市内局番は1234 加入者番号は5678です！市外局番は9876 市内局番は9876 加入者番号は5432です！
+```
