@@ -4,6 +4,10 @@
 
 ## 基本
 
+- 最初にマッチした部分のみを取得
+
+- 何もマッチしなければ、結果は `None` になる
+
 ```python
 import re
 
@@ -14,21 +18,48 @@ result  = pattern.search(text)
 
 if result := pattern.search(text):
     print('マッチした文字列', result.group(0))
-    print('1番目にマッチした文字列', result.group(1))
-    print('2番目にマッチした文字列', result.group(2))
-    print('3番目にマッチした文字列', result.group(3))
+    print(result.group(1))
+    print(result.group(2))
+    print(result.group(3))
 ```
 
 ```python
 マッチした文字列 080-1234-5678
-1番目にマッチした文字列 080
-2番目にマッチした文字列 1234
-3番目にマッチした文字列 5678
+080
+1234
+5678
 ```
 
-- 最初にマッチした部分のみを取得
+##### 名前付きキャプチャグループ
 
-- 何もマッチしなければ、結果は `None` になる
+- パターンのグループに、任意の名前が付けられる
+
+- `?P<グループ名>` で指定
+
+- 取り出す時にもグループ名が使える → 可読性が上がる！
+
+```python
+import re
+
+text = '電話番号は080-1234-5678です！会社の携帯は090-9876-5432です！'
+
+pattern = re.compile(r'(?P<area>\d{2,4})-(?P<city>\d{2,4})-(?P<local>\d{2,4})')
+result  = pattern.search(text)
+
+if result := pattern.search(text):
+    print('マッチした文字列', result.group(0))
+    print(result.group('area'))
+    print(result.group('city'))
+    print(result.group('local'))
+```
+
+```python
+マッチした文字列 080-1234-5678
+080
+1234
+5678
+```
+
 
 ## マッチした文字全てを取得
 
