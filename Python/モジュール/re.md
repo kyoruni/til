@@ -206,7 +206,49 @@ hoge@example.com
 FuGa@example.com
 ```
 
+## 出来るだけ短い文字列を一致させる
 
+- 通常の挙動では、出来るだけ長い文字列をマッチさせようとする
 
+- 例えば、以下の場合 `<p>` 〜 `</h1>` がひとつの塊としてマッチする
 
+```python
+import re
 
+text = '<p><strong>段落</strong></p><h1>見出し1</h1>'
+
+pattern = re.compile(r'<.+>')
+results = pattern.findall(text)
+
+for result in results:
+    print(result)
+```
+
+```python
+<p><strong>段落</strong></p><h1>見出し1</h1>
+```
+
+この例でHTMLを小分けにしたい場合は `re.compile(r'<.+?>')` のように、可変長パターンの後ろに **?** を付けてあげる
+
+```python
+import re
+
+text = '<p><strong>段落</strong></p><h1>見出し1</h1>'
+
+pattern = re.compile(r'<.+?>')
+results = pattern.findall(text)
+
+for result in results:
+    print(result)
+```
+
+HTML要素がバラバラに取れた
+
+```python
+<p>
+<strong>
+</strong>
+</p>
+<h1>
+</h1>
+```
