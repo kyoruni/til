@@ -22,7 +22,7 @@ $ sudo yum -y install httpd
 $ sudo systemctl start httpd.service
 ```
 
-##### 起動しているか確認
+### 起動しているか確認
 
 ```bash
 $ systemctl status httpd.service
@@ -41,7 +41,7 @@ $ systemctl status httpd.service
 $ sudo systemctl enable httpd.service
 ```
 
-##### 設定できたか確認
+### 設定できたか確認
 
 - enabled になっていたら OK
 
@@ -53,7 +53,7 @@ httpd.service                                 enabled
 
 ## 起動しているか確認する
 
-##### プロセスを確認する
+### プロセスを確認する
 
 ```bash
 $ ps -ax | grep httpd
@@ -71,7 +71,7 @@ $ ps -ax | grep httpd
 
 - 先頭の数値は PID ( プロセスID ) で、 **kill** コマンドで終了させたい時などに使用する
 
-##### ネットワークの待ち受け状態を確認する
+### ネットワークの待ち受け状態を確認する
 
 ```bash
 $ sudo lsof -i -n -P
@@ -91,10 +91,10 @@ httpd    3355   apache    4u  IPv6  21229      0t0  TCP *:80 (LISTEN)
 インスタンスの、パブリックIPアドレスをブラウザで開いてみる  
 → 応答がなくてアクセスできない
 
-インスタンスのセキュリティグループ（ファイアウォール的なもの）で、80番ポートへの通信が全て弾かれているのが原因 
+インスタンスのセキュリティグループ（ファイアウォール的なもの）で、80番ポートへの通信が全て弾かれているのが原因  
 → 80番ポートを開ける作業を行う
 
-##### 80番ポートの通信を通す
+### 80番ポートの通信を通す
 
 - ECS > セキュリティグループ > インスタンスに紐付けたセキュリティグループ
 
