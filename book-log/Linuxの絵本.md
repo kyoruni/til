@@ -2,27 +2,27 @@
 
 ## Linuxの勉強をはじめる前に
 
-- [ ] OSの役割
+- [x] OSの役割
 
-- [ ] CUIとGUI
+- [x] CUIとGUI
 
-- [ ] UNIXとUNIX系OS
+- [x] UNIXとUNIX系OS
 
-- [ ] Linuxについて
+- [x] Linuxについて
 
-- [ ] BSD系UNIXについて
+- [x] BSD系UNIXについて
 
-- [ ] コンソールという考え方
+- [x] コンソールという考え方
 
-- [ ] 意外に身近なLinuxの世界
+- [x] 意外に身近なLinuxの世界
 
-- [ ] 仮想環境
+- [x] 仮想環境
 
-- [ ] VirtualBoxの使い方
+- [x] VirtualBoxの使い方
 
-- [ ] CentOSの使い方
+- [x] CentOSの使い方
 
-- [ ] Ubuntuの使い方
+- [x] Ubuntuの使い方
 
 ## 第1章 Linuxを使ってみよう
 
