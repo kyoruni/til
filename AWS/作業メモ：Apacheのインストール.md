@@ -3,9 +3,7 @@
 ## ssh でログイン
 
 ```bash
-$ ssh -i 秘密鍵のファイル ec2-user@インスタンスのIPアドレス
-
-# 例
+# ssh -i 秘密鍵 ec2-user@インスタンスのIPアドレス
 $ ssh -i key.pem ec2-user@xxx.xxx.xxx.xxx
 ```
 
@@ -46,6 +44,7 @@ $ sudo systemctl enable httpd.service
 - enabled になっていたら OK
 
 ```bash
+# -t service: サービス一覧
 $ sudo systemctl list-unit-files -t service | grep httpd
 
 httpd.service                                 enabled
@@ -56,6 +55,7 @@ httpd.service                                 enabled
 ### プロセスを確認する
 
 ```bash
+# -ax: 全ユーザーのプロセスを表示 + デーモンのプロセスも表示
 $ ps -ax | grep httpd
 
  3350 ?        Ss     0:00 /usr/sbin/httpd -DFOREGROUND
@@ -74,6 +74,9 @@ $ ps -ax | grep httpd
 ### ネットワークの待ち受け状態を確認する
 
 ```bash
+# -i: 全てのネットワークソケットを表示する
+# -n: IPアドレスを表示する
+# -P: ポート番号を表示する
 $ sudo lsof -i -n -P
 
 httpd    3350     root    4u  IPv6  21229      0t0  TCP *:80 (LISTEN)
