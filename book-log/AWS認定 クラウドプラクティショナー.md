@@ -76,11 +76,11 @@
 
 ## 第9章 管理サービス
 
-- [ ] 9-1 CloudWatch
+- [x] 9-1 CloudWatch
 
-- [ ] 9-2 Trusted Advisor
+- [x] 9-2 Trusted Advisor
 
-- [ ] 9-3 その他の管理サービス
+- [x] 9-3 その他の管理サービス
 
 ## 第10章 請求と料金
 
