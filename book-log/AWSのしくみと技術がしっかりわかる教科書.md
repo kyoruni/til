@@ -2,17 +2,17 @@
 
 ## 1章 Amazon Web Services の基礎知識
 
-- [ ] 01 Amazon Web Servicesとは
+- [x] 01 Amazon Web Servicesとは
 
-- [ ] 02 AWSのサービス
+- [x] 02 AWSのサービス
 
-- [ ] 03 AWSのコスト
+- [x] 03 AWSのコスト
 
-- [ ] 04 AWSの利用のしくみ
+- [x] 04 AWSの利用のしくみ
 
-- [ ] 05 AWSの導入事例
+- [x] 05 AWSの導入事例
 
-- [ ] 06 AWSの導入方法
+- [x] 06 AWSの導入方法
 
 ## 2章 AWSを知るためのクラウド&ネットワークのしくみ
 
