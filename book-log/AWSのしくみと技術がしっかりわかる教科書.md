@@ -32,17 +32,17 @@
 
 ## 3章 AWS を使うためのツール
 
-- [ ] 14 AWSの使い方とアカウント
+- [x] 14 AWSの使い方とアカウント
 
-- [ ] 15 マネジメントコンソールとダッシュボード
+- [x] 15 マネジメントコンソールとダッシュボード
 
-- [ ] 16 AWS IAMとアクセス権
+- [x] 16 AWS IAMとアクセス権
 
-- [ ] 17 Amazon CloudWatch
+- [x] 17 Amazon CloudWatch
 
-- [ ] 18 AWS Billing and Cost Management
+- [x] 18 AWS Billing and Cost Management
 
-- [ ] 19 リージョンとアベイラビリティーゾーン
+- [x] 19 リージョンとアベイラビリティーゾーン
 
 ## 4章 サーバーサービス「Amazon EC2」
 
