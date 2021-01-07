@@ -46,27 +46,27 @@
 
 ## 4章 サーバーサービス「Amazon EC2」
 
-- [ ] 20 Amazon EC2とは
+- [x] 20 Amazon EC2とは
 
-- [ ] 21 EC2を使用する流れ
+- [x] 21 EC2を使用する流れ
 
-- [ ] 22 インスタンスの作成と料金
+- [x] 22 インスタンスの作成と料金
 
-- [ ] 23 Amazonマシンイメージ（AMI）
+- [x] 23 Amazonマシンイメージ（AMI）
 
-- [ ] 24 インスタンスタイプ
+- [x] 24 インスタンスタイプ
 
-- [ ] 25 Amazon EBS
+- [x] 25 Amazon EBS
 
-- [ ] 26 SSHを使ったアクセスとキーペア
+- [x] 26 SSHを使ったアクセスとキーペア
 
-- [ ] 27 Elastic IPアドレス
+- [x] 27 Elastic IPアドレス
 
-- [ ] 28 Elastic Load Balancing
+- [x] 28 Elastic Load Balancing
 
-- [ ] 29 スナップショット
+- [x] 29 スナップショット
 
-- [ ] 30 Auto Scaling
+- [x] 30 Auto Scaling
 
 ## 5章 ストレージサービス「Amazon S3」
 
