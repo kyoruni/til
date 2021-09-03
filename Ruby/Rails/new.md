@@ -24,6 +24,13 @@ $ rails new -h
 | -M | Action Mailer を使わない | | | Action Mailer：メール送信してくれる機能 [参考](https://railsguides.jp/action_mailer_basics.html) |
 | -T | Test::Unit を使わない | | | RSpec 使うならいらないかも… |
 
+## バージョン指定
+
+```bash
+# バージョン6.1.4で、hogeという名前のプロジェクト作る
+$ rails _6.1.4_ new hoge
+```
+
 ## 参考URL
 
 - [railsコマンド(rails) | Railsドキュメント](https://railsdoc.com/rails)
