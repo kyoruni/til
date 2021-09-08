@@ -16,3 +16,12 @@
 | CMD     | コンテナ起動時に実行するコマンド | |
 | WORKDIR | CMD COPY などを実行する際の作業ディレクトリを指定 | |
 
+- 複数のコマンドを実行する必要があるときも、できるだけ `RUN` 命令は1つにまとめておく
+
+```bash
+# こんな感じで
+RUN apt-get update \
+    && apt-get install -y \
+       cron \
+       git
+```
