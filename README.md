@@ -11,15 +11,3 @@
 - 覚えたことをメモとして残しておき、後で参照できるようにする → 自分用tipsを作る
 
 - アウトプットをコミット履歴やコントリビューションで可視化 → モチベーションに繋げる
-
-## メモ
-
-- [Issues](https://github.com/kyoruni/til/issues)
-
-  - やりたいこと、興味あることのメモ
-
-  - 実行したコマンドのメモ等は、各Issueのコメント欄に書いていく
-
-- [book-log](https://github.com/kyoruni/til/tree/master/book-log)
-
-  - 技術書を読んだら、ディレクトリ配下の進捗ファイルを更新する
