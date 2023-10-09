@@ -1,5 +1,7 @@
 # kyoruni/TIL
 
+**【 Obsidian に移行したため、このリポジトリはアーカイブします 】**
+
 ## TIL
 >「Today I Learned」の略で、Github上にTILというリポジトリを作成してそこに今日覚えたことを書いていくというものです。
 >- [Githubのリポジトリ「TIL」を使って小さなアウトプットを習慣化する - Qiita](https://qiita.com/nemui_/items/239335b4ed0c3c797add)
